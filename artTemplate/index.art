@@ -1,0 +1,7 @@
+<div>
+    <span>{{data.name}}</span>
+    <span>{{data.age}}</span>
+    <span><%= data.age %></span>
+    <span>{{a}}</span>
+    <span>{{b || a}}</span>
+</div>

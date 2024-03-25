@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">click</button>
+    <script>
+        const btn = document.getElementsByClassName('btn')[0]
+        const ws = new WebSocket('ws://localhost:4500')
+
+        ws.onopen = function(){
+            console.log('已连接')
+        }
+
+        ws.onmessage = function(data){
+            console.log(data)
+            console.log(data.data)
+        }
+
+        btn.addEventListener('click',function(){
+            ws.send('🍎')
+        })
+    </script>
+</body>
+</html>
