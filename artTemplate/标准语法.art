@@ -1,0 +1,5 @@
+<div>{{data.name}}</div>
+<div>{{value}}</div>
+<div>
+{{if show }} <span>{{show}}</span> {{/if}}
+<div>

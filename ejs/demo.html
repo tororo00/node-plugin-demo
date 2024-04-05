@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- for -->
+    <% for(let i = 0; i < len; i++) { %> 
+        <span><%= i %></span>
+    <% } %>
+
+    <%# forEach %>
+    <% arr.forEach(item => {%> <%= item.name %> <%})%>
+
+    <%= arr.join() %>
+
+    <!-- if else if -->
+    <% if(show) { %>
+        <span>😀</span>
+    <% } else if(1) { %>
+        <span>🍎</span>
+    <% } %>
+
+    <!-- if else -->
+    <% if(show) { %>
+        <span>😀</span>
+    <% } else { %>
+        <span>🍎</span>
+    <% } %>
+
+    <!-- if -->
+    <% if(show) {%> <%= 12 %> <% } %>
+
+    <!-- 三目运算符 -->
+    <%= show ? 1 : 2 %>
+
+    <!-- for in -->
+    <% for(const key in obj){ %>
+        <span><%= key %> <%= obj[key] %></span>
+    <% } %>
+
+    <!-- console.log -->
+    <% console.log('pp') %>
+
+    <%# 输出非转义的内容(原始内容) %>
+    <%- p %>
+
+    <%# for...of %>
+    <% for(const item of arr){ %>
+        <%= item.name %>
+    <% } %>
+
+    <%# switch case %>
+    <% switch(flag) {
+        case 1: %>
+            <span>🍌</span>
+            <% break %>
+        <% case 2: %>
+            <span>🍎</span>
+            <% break %>
+    <% } %>
+
+    <%# include %>
+    <%- include('./index.ejs',name) %>
+
+    <%- span %>
+    <%= span %>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<ul>
+{{ each arr val key}}
+ <li>{{key}} {{ val.a }}</li>
+{{/each}}
+</ul>

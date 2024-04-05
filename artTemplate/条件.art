@@ -1,0 +1,9 @@
+// 标准语法
+{{if show}} <div>{{show}}show<div> {{/if}}
+{{if visible}} <div>{{visible}}visible</div>{{/if}}
+
+{{if show1}} <span>1</span> {{else if show2}} <span>2</span> {{/if}}
+
+// 原始语法
+<% if (show) { %> <span>44</span> <%} %>
+<% if(show1) {%> <span>222</span><%} else if(show2) {%> <span>3333</span><%} %>

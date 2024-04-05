@@ -1,0 +1,3 @@
+// 原始语法
+<div><%= data.user %></div>
+<div><%= value %></div>

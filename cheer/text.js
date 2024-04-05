@@ -1,19 +1,21 @@
 const http = require('http')
 const cheerio = require('cheerio')
 const chalk = require('chalk')
-const { rmSync } = require('fs')
+
+console.log(cheerio)
 
 const server = http.createServer()
 
 const $ = cheerio.load(`<div>
     <span></span>
 </div`,null,false)
+console.log('$',$)
 console.log($('span'))
 
 /* 
     const $ = cheerio.load(content, options?, isDocument?)
 
-    创建一个查询函数，绑定到根据提供的标记创建的文档上
+    创建一个查询函数，绑定到根据提供的标签创建的文档上
 
     请注意，与网络浏览器上下文类似，此操作可能会引入<html>、 <head> 和<body>元素；将isDocument设为false可切换到片段模式并禁用此操作。
 
