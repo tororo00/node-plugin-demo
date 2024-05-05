@@ -11,3 +11,5 @@ console.log(shell.pwd().toString())
 console.log(typeof shell.pwd())
 
 server.listen(4000,() => {})
+
+console.log('oooo')
