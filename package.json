@@ -11,14 +11,29 @@
   "license": "ISC",
   "dependencies": {
     "art-template": "^4.13.2",
+    "async-validator": "^4.2.5",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0-rc.12",
     "commander": "^12.0.0",
+    "delegates": "^1.0.0",
     "ejs": "^3.1.9",
+    "finalhandler": "^1.2.0",
     "handlebars": "^4.7.8",
+    "mime-types": "^2.1.35",
     "mitt": "^3.0.1",
     "mustache": "^4.2.0",
+    "mysql": "^2.18.1",
     "node-fetch": "^3.3.2",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "qs": "^6.12.0",
+    "serve-static": "^1.15.0",
+    "shelljs": "^0.8.5",
+    "svg-captcha": "^1.4.0",
+    "tapable": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }

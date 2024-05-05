@@ -1,22 +1,21 @@
 const { default: Schema } = require('async-validator')
-// import Schema from 'async-validator'
-
-// console.log(typeof Schema.default)
-console.log(Schema)
 
 const descriptor = {
     name: {
-        type: 'string',
-        required: true,
+        type: 'number',
+        len: 10
+    },
+    arr: {
+        type: 'array',
+        len: 3
     }
 }
 
 const validator = new Schema(descriptor)
 
-// console.log(validator)
-
 validator.validate({
-    name: '100'
+    name: 10,
+    arr: [1,2,3]
 },(errors,fields) => {
     console.log('errors',errors)
     console.log('fields',fields)
