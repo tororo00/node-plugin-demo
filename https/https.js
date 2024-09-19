@@ -3,8 +3,11 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 const options = {
+    // 
     key: fs.readFileSync('./server-key.pem'),
+    // 
     ca: [fs.readFileSync('./ca-cert.pem')],
+    // 
     cert: fs.readFileSync('./server-cert.pem')
 };
 
