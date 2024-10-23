@@ -5,25 +5,29 @@ const http = require('http')
 const db = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
-    password: 'password',
-    database: 'yangyang'
+    password: 'yangYANG00',
+    database: 'world'
 })
 
 db.connect((error) => {
     if (error) {
-        console.log(error)
+        console.warn("数据库链接失败", error)
     } else {
-        console.log('connected')
+        console.log('数据库链接成功')
     }
 })
 
+// SELECT 字段名,字段名,... FROM 数据库表的名字
+// SELECT * FROM 数据库表的名字 获取所有字段的数据
 const server = http.createServer((req, res) => {
-    db.query('SELECT name,password FROM users', (error, data,fields) => {
+    db.query('SELECT * FROM country', (error, data,fields) => {
         console.log(fields)
         res.statusCode = 200
+        // 开启跨域资源共享
         res.setHeader('Access-Control-Allow-Origin','*')
         res.setHeader('Access-Control-Allow-Headers','*')
         res.setHeader('Access-Control-Allow-Methods','POST,GET')
+        // 设置响应头，响应结果是json数据
         res.setHeader('Content-Type','application/json')
         res.write(JSON.stringify(data))
         res.end()
@@ -31,5 +35,5 @@ const server = http.createServer((req, res) => {
 })
 
 server.listen(4200, () => {
-    console.log('http://localhost:4200')
+    console.log('service is running at http://localhost:4200')
 })
