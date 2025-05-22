@@ -5,7 +5,7 @@ const chalk = require('chalk')
 const server = http.createServer()
 
 server.on('request',(req,res) => {
-    res.setHeader('Set-Cookie',cookie.serialize('key','value',{
+    res.setHeader('Set-Cookie', cookie.serialize('key','value',{
         // 客户端不可以通过documet.cookie操作cookie
         httpOnly: true,
         // 设置同一站点

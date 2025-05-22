@@ -1,10 +1,10 @@
-const { glob, globSync, globStream, hasMagic, escape, unescape, Glob, globIterateSync } = require('glob')
+const { glob, globSync, globStream, hasMagic, escape, unescape, Glob, globIterateSync, sync } = require('glob')
 const path = require('path')
 
 // import { type GlobOptions } from "glob"
 
 async function fn(){
-    const res = await glob("**/*.js",{ignore:['node_modules/**','date-fns/**']})
+    const res = await glob("**/*.js", {ignore:['node_modules/**','date-fns/**']})
     console.log(res)
 }
 
@@ -106,3 +106,8 @@ console.log(globIterateSync('./node-glob/dir/**'))
 for(const item of globIterateSync('./node-glob/dir/**')){
     console.log(item)
 }
+
+// 匹配特定目录下的所有文件
+console.log(glob.sync("../https/*"))
+console.log(globSync("../https/*"))
+console.log(sync("../https/*"))

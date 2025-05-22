@@ -1,0 +1,3 @@
+.foo:disabled, .foo[disabled] {
+    background-color: skyblue;
+}

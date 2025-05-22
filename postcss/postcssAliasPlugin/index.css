@@ -1,0 +1,9 @@
+@alias {
+    fs: font-size;
+    bg: background;
+}
+
+.box {
+    fs: 10px;
+    bg: red;
+}

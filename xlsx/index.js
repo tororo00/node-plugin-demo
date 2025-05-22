@@ -1,10 +1,4 @@
 const xlsx = require('xlsx')
-const { animate } = require("popmotion")
-const CryptoJS = require("crypto-js")
-
-CryptoJS.AES.encrypt
-
-CryptoJS.lib.WordArray
 
 /* 
     创建一个新的工作薄

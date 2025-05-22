@@ -106,7 +106,7 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "include": ["./**/*.ts"],
+  "include": ["./**/*.ts", "exceljs/index.ts", "immutable/index.js", "immutable/index.js"],
    // Most ts-node options can be specified here using their programmatic names.
    "ts-node": {
     // It is faster to skip typechecking.
